@@ -156,7 +156,7 @@ module.exports.autocheckout = (url) => {
       await page.click("div.cart-page-footer__checkout > button", {
         waitUntil: "domcontentloaded",
       });
-      console.log(`[✅] Berhasil checkout`);
+      console.log(`Berhasil checkout`);
 
       //Metode Pembayaran Bank Mandiri
       const TransferBank =
@@ -172,7 +172,7 @@ module.exports.autocheckout = (url) => {
       await this.sleep(1 * 1000);
       await page.waitForSelector(selbuy);
       await page.click(selbuy);
-      console.log("[✅] Berhasil dipesan, barang akan dikirim!");
+      console.log("Berhasil dipesan, barang akan dikirim!");
     } catch (e) {
       console.log(e);
     }
